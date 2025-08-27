@@ -1,107 +1,168 @@
-# Prueba Técnica React
+# Frontend Technical Test - User Profile Management
 
-Una aplicación de gestión de perfiles de usuarios construida con React, TypeScript y Vite.
+A React application for managing user profiles built with TypeScript and Vite.
 
-## 🚀 Características
+## 🚀 Features
 
-- **Gestión de usuarios**: Ver, crear y eliminar perfiles de usuarios
-- **Búsqueda y filtrado**: Buscar usuarios por nombre, email o ubicación
-- **Ordenamiento**: Ordenar usuarios por nombre, edad o ubicación
-- **Scroll infinito**: Cargar más usuarios automáticamente
-- **Persistencia local**: Los datos se guardan en localStorage
-- **Interfaz responsive**: Diseño adaptativo con Tailwind CSS
-- **Modal de detalles**: Ver información completa de cada usuario
+- **User Management**: View, create, and delete user profiles
+- **Search & Filtering**: Search users by name, email, or location
+- **Sorting**: Sort users by name, age, or location
+- **Infinite Scroll**: Automatically load more users
+- **Local Persistence**: Data saved in localStorage
+- **Responsive Design**: Adaptive design with Tailwind CSS
+- **Detail Modal**: View complete user information
 
-## 🛠️ Tecnologías
+## 🛠️ Technologies
 
-- **React 19** - Biblioteca de UI
-- **TypeScript** - Tipado estático
-- **Vite** - Build tool y dev server
-- **Tailwind CSS** - Framework de estilos
-- **Lucide React** - Iconos
-- **Fetch API** - Peticiones HTTP
+- **React 19** - UI Library
+- **TypeScript** - Static typing
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling framework
+- **Lucide React** - Icons
+- **Fetch API** - HTTP requests
 
-## 📦 Instalación
+## 📦 Installation
 
-1. **Clona el repositorio**
+1. **Clone the repository**
 
    ```bash
-   git clone <url-del-repositorio>
+   git clone <repository-url>
    cd prueba-tecnica-react
    ```
 
-2. **Instala las dependencias**
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **Ejecuta el servidor de desarrollo**
+3. **Run development server**
 
    ```bash
    npm run dev
    ```
 
-4. **Abre tu navegador**
+4. **Open your browser**
+
    ```
    http://localhost:5173
    ```
 
-## 🎯 Scripts disponibles
+## 🎯 Available Scripts
 
-- `npm run dev` - Inicia el servidor de desarrollo
-- `npm run build` - Construye la aplicación para producción
-- `npm run preview` - Previsualiza la build de producción
-- `npm run lint` - Ejecuta el linter
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run linter
 
-## 📁 Estructura del proyecto
+## 📁 Project Structure
 
 ```
 src/
-├── components/     # Componentes React
+├── components/     # React components
 ├── hooks/         # Custom hooks
-├── services/      # Servicios API
-├── types/         # Definiciones TypeScript
-├── utils/         # Utilidades y helpers
-├── constants/     # Constantes de configuración
-└── context/       # Contextos de React
+├── services/      # API services
+├── types/         # TypeScript definitions
+├── utils/         # Utilities and helpers
+├── constants/     # Configuration constants
+└── context/       # React contexts
 ```
 
-## 🔧 Funcionalidades principales
+## ✅ Technical Test Checklist
 
-### Gestión de usuarios
+### Basic Requirements
 
-- **Generar perfil**: Crea un nuevo perfil de usuario aleatorio
-- **Cargar más**: Carga 3 usuarios adicionales
-- **Eliminar usuario**: Elimina un usuario específico
-- **Eliminar todos**: Limpia todos los usuarios
+- [x] **Load 3 random users on startup** (Random User Generator API)
+- [x] **Display user information**: photo, full name, country, city, email, phone
+- [x] **Attractive grid/card design** with modern UI
+- [x] **"Generate new profile" button** that ADDS (doesn't replace) new users
+- [x] **Infinite scroll OR "Load more" button** (groups of 3 users)
 
-### Búsqueda y filtrado
+### Filtering and Sorting
 
-- **Búsqueda en tiempo real** por nombre, email o ubicación
-- **Ordenamiento** por nombre (A-Z, Z-A), edad y ubicación
-- **Filtrado automático** de resultados
+- [x] **Search by name or country** (instant search)
+- [x] **Sort by name** (ascending/descending) and country (alphabetical)
+- [x] **Real-time filtering** with search results
 
-### Persistencia
+### Detail Modal
 
-- Los usuarios se guardan automáticamente en localStorage
-- Las preferencias de búsqueda y ordenamiento se mantienen
-- Los datos persisten entre sesiones
+- [x] **Click on card opens modal** with additional information
+- [x] **Display complete address**, date of birth, timezone
+- [x] **Button/way to close modal** (X button and click outside)
+- [x] **Smooth modal animations**
+
+### Persistence
+
+- [x] **localStorage/sessionStorage** for profiles and filters
+- [x] **Restore state on page reload**
+- [x] **Persistent search terms and sorting preferences**
+
+### UX/UI
+
+- [x] **Smooth animations** for loading and modal transitions
+- [x] **Visible loading indicators** for all async operations
+- [x] **Responsive design** for mobile, tablet, and desktop
+- [x] **Error handling** for API errors and no search results
+- [x] **Loading states** with minimum duration for better UX
+
+### Code Quality
+
+- [x] **TypeScript implementation** with proper typing
+- [x] **Custom hooks** for state management
+- [x] **Component separation** and reusability
+- [x] **Clean code structure** with proper organization
+- [x] **ESLint configuration** for code quality
+
+### Performance
+
+- [x] **Optimized re-renders** with useCallback and useMemo
+- [x] **Efficient state management** with consolidated state object
+- [x] **Lazy loading** with infinite scroll
+- [x] **Minimal dependencies** (removed axios in favor of fetch)
+
+## 🔧 Main Functionality
+
+### User Management
+
+- **Generate Profile**: Creates a new random user profile
+- **Load More**: Loads 3 additional users
+- **Delete User**: Removes a specific user
+- **Delete All**: Clears all users
+
+### Search and Filtering
+
+- **Real-time search** by name, email, or location
+- **Sorting** by name (A-Z, Z-A), age, and location
+- **Automatic filtering** of results
+
+### Data Persistence
+
+- Users are automatically saved to localStorage
+- Search and sorting preferences are maintained
+- Data persists between sessions
 
 ## 🌐 API
 
-La aplicación utiliza la [Random User API](https://randomuser.me/) para generar perfiles de usuarios aleatorios.
+The application uses the [Random User API](https://randomuser.me/) to generate random user profiles.
 
-## 📱 Responsive
+## 📱 Responsive Design
 
-La aplicación está optimizada para dispositivos móviles, tablets y desktop.
+The application is optimized for mobile devices, tablets, and desktop.
 
-## 🚀 Despliegue
+## 🚀 Deployment
 
-Para construir la aplicación para producción:
+To build the application for production:
 
 ```bash
 npm run build
 ```
 
-Los archivos se generarán en la carpeta `dist/` y están listos para desplegar en cualquier servidor web estático.
+Files will be generated in the `dist/` folder and are ready to deploy on any static web server.
+
+## 📝 Implementation Notes
+
+- **State Management**: Consolidated all states into a single object for better maintainability
+- **API Integration**: Uses native fetch API instead of external libraries
+- **Performance**: Implements infinite scroll with proper loading states
+- **User Experience**: Smooth animations and loading indicators throughout the app
+- **Error Handling**: Comprehensive error handling for API failures and edge cases
